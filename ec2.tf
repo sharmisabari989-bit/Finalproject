@@ -1,13 +1,24 @@
 #instance1
 resource "aws_instance" "ins1" {
-  ami           = "ami-0d27e0fb3bac4d724"
-  associate_public_ip_address = "true"
-  instance_type = "t3.micro"
-  key_name = "shartest"
-  subnet_id = aws_subnet.pub-sub1.id
+  ami = "ami-0d27e0fb3bac4d724"
+
+  user_data = <<-EOF
+    #!/bin/bash
+
+    dnf install -y docker
+
+    systemctl start docker
+    systemctl enable docker
+
+    usermod -aG docker ec2-user
+  EOF
+
+  associate_public_ip_address = true
+  instance_type               = "t3.micro"
+  key_name                    = "shartest"
+  subnet_id                   = aws_subnet.pub-sub1.id
 
   vpc_security_group_ids = [aws_security_group.projectsecurity.id]
-
 
   tags = {
     Name = "finalins1"
