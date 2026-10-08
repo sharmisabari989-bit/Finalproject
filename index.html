@@ -1,109 +1,248 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevSpace</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
+```
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
 
-        header {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 30px;
-        }
+    body {
+        background: #f5f7fb;
+        color: #1e293b;
+    }
 
-        nav {
-            background-color: #444;
-            text-align: center;
-            padding: 15px;
-        }
+    nav {
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 8%;
+        background: white;
+        border-bottom: 1px solid #e5e7eb;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 20px;
-        }
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2563eb;
+    }
 
-        .container {
-            width: 80%;
-            margin: 40px auto;
+    nav a {
+        text-decoration: none;
+        color: #475569;
+        margin-left: 30px;
+        font-size: 15px;
+    }
+
+    .hero {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px 8%;
+        gap: 50px;
+    }
+
+    .hero-text {
+        max-width: 600px;
+    }
+
+    .tag {
+        display: inline-block;
+        background: #dbeafe;
+        color: #2563eb;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 58px;
+        line-height: 1.1;
+        margin-bottom: 20px;
+    }
+
+    h1 span {
+        color: #2563eb;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+        line-height: 1.7;
+        color: #64748b;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 14px 25px;
+        background: #2563eb;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .btn.secondary {
+        background: white;
+        color: #2563eb;
+        border: 1px solid #2563eb;
+    }
+
+    .card {
+        width: 380px;
+        background: white;
+        padding: 35px;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    }
+
+    .card h2 {
+        margin-bottom: 20px;
+    }
+
+    .feature {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 0;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .icon {
+        width: 45px;
+        height: 45px;
+        background: #eff6ff;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+    }
+
+    .feature:last-child {
+        border-bottom: none;
+    }
+
+    .feature p {
+        color: #64748b;
+        font-size: 14px;
+        margin-top: 4px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        color: #94a3b8;
+        background: white;
+    }
+
+    @media (max-width: 800px) {
+        .hero {
+            flex-direction: column;
             text-align: center;
         }
 
         .card {
-            background-color: white;
-            padding: 25px;
-            margin: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px gray;
+            width: 100%;
+            max-width: 380px;
         }
 
-        button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 5px;
-            cursor: pointer;
+        h1 {
+            font-size: 42px;
         }
+    }
+</style>
+```
 
-        footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-        }
-    </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Welcome to My Website</h1>
-        <p>My First HTML Website</p>
-    </header>
+```
+<nav>
+    <div class="logo">DevSpace</div>
 
-    <nav>
+    <div>
         <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
+        <a href="#">Projects</a>
         <a href="#">Contact</a>
-    </nav>
+    </div>
+</nav>
 
-    <div class="container">
+<section class="hero">
 
-        <div class="card">
-            <h2>About Me</h2>
-            <p>
-                Hello! My name is John.
-                I am learning HTML, CSS and Web Development.
-            </p>
-        </div>
+    <div class="hero-text">
+        <div class="tag">🚀 Welcome to DevSpace</div>
 
-        <div class="card">
-            <h2>My Services</h2>
-            <p>Web Development</p>
-            <p>Cloud Computing</p>
-            <p>DevOps</p>
-        </div>
+        <h1>
+            Build. Deploy.<br>
+            <span>Innovate.</span>
+        </h1>
 
-        <div class="card">
-            <h2>Contact Me</h2>
-            <p>Email: example@gmail.com</p>
-            <button>Contact Me</button>
-        </div>
+        <p>
+            A simple and modern platform for developers to
+            build amazing projects, learn new technologies,
+            and bring ideas to life.
+        </p>
 
+        <a href="#" class="btn">Get Started</a>
+        <a href="#" class="btn secondary">Explore</a>
     </div>
 
-    <footer>
-        <p>© 2026 My Website. All Rights Reserved.</p>
-    </footer>
+    <div class="card">
+        <h2>Why DevSpace?</h2>
+
+        <div class="feature">
+            <div class="icon">⚡</div>
+            <div>
+                <strong>Fast & Simple</strong>
+                <p>Easy to use and quick to deploy.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="icon">🐳</div>
+            <div>
+                <strong>Docker Ready</strong>
+                <p>Containerized and ready to run.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="icon">☁️</div>
+            <div>
+                <strong>Cloud Friendly</strong>
+                <p>Designed for modern infrastructure.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="icon">🔒</div>
+            <div>
+                <strong>Reliable</strong>
+                <p>Clean and dependable architecture.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 DevSpace · Built with HTML & CSS
+</footer>
+```
 
 </body>
 </html>
